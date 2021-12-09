@@ -141,7 +141,7 @@ async def handle_request(req: web.Request, head: bool = False) -> web.Response:
 
     h = {
         'Content-Type': message.file.mime_type,
-        'Content-Range': f'bytes {offset}-{size}/{size}',
+        #'Content-Range': f'bytes {offset}-{size}/{size}',
         'Content-Length': str(limit - offset),
         'Access-Control-Allow-Origin': '*',
         'content-security-policy': 'script-src "self" "unsafe-inline" "unsafe-eval"',
